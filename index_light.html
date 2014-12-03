@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Flat synth</title>
+		<title>Flat synth(Light Version)</title>
 		<script type="text/javascript">
 			// 初期設定
-			var max_sound = 32;　// 最大同時発生音
+			var max_sound = 16;　// 最大同時発生音
 			var partnum = 3; // パーシャルの数
-			var show_oscscope = 1; // 1ならオシロスコープ表示
+			var show_oscscope = 0; // 1ならオシロスコープ表示
 		</script>
 		<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
 		<script src="jquery-ui.min.js" type="text/javascript"></script>	
@@ -38,7 +38,7 @@
 		</style>
 	</head>
 	<body>
-		<b>Flat Synth</b><br>
+		<b>Flat Synth(Light Version)</b><br>
 		<div id='midi_ins'></div>
 		<table id='panel_main'>
 			<tr id='panel_title'>
@@ -206,8 +206,6 @@
 				<tr><td><input id='bend_down' class='knob' data-min=-24 data-max=0 data-cursor=20 value=-2></td><td><input id='bend_up' class='knob' data-min=0 data-max=24 data-cursor=20 value=2></td></tr>
 				<tr><td>portament</td><td>volume</td></tr>
 				<tr><td><input id='portament' class='knob'></td><td><input id='volume' class='knob' value=100></td></tr>
-				<tr><td colspan='2'><div id='osc_scope_label'>oscilloscope</div></td></tr>
-				<tr><td colspan='2'><canvas id='osc_scope' width=160 height=100></canvas></td></tr>
 				<tr><td colspan='2'><button id='reset'>reset</button></td></tr>
 			</table>
 		</div>
